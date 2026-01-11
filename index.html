@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sneha Reddy | Portfolio</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background: radial-gradient(circle at top, #111 0%, #000 60%);
+      color: #e6e6e6;
+      overflow-x: hidden;
+    }
+
+    /* --------- SCROLLBAR --------- */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-thumb { background: #555; border-radius: 10px; }
+
+    /* --------- HERO --------- */
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3.8rem;
+      letter-spacing: 4px;
+      animation: fadeDown 1.5s ease forwards;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      color: #bdbdbd;
+      margin-top: 15px;
+      animation: fadeUp 1.8s ease forwards;
+    }
+
+    .btn {
+      margin-top: 40px;
+      padding: 16px 42px;
+      background: #ffffff;
+      color: #000;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn:hover { transform: scale(1.08); background: #e0e0e0; }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      font-size: 0.9rem;
+      color: #aaa;
+      animation: bounce 2s infinite;
+    }
+
+    /* --------- NAV --------- */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(8px);
+      padding: 15px;
+      text-align: center;
+      z-index: 99;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    /* --------- SECTIONS --------- */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 20px;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1s ease;
+    }
+
+    section.show { opacity: 1; transform: translateY(0); }
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      letter-spacing: 5px;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #fff;
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* --------- CARDS --------- */
+    .card {
+      background: rgba(255,255,255,0.04);
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.08);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 55px rgba(255,255,255,0.15);
+    }
+
+    ul li { margin-bottom: 10px; }
+
+    /* --------- SKILLS --------- */
+    .skills span {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      border: 1px solid #444;
+      transition: all 0.3s;
+    }
+
+    .skills span:hover { background: #fff; color: #000; transform: scale(1.1); }
+
+    /* --------- CONTACT --------- */
+    #contact {
+      text-align: center;
+    }
+
+    #contact p {
+      font-size: 1.4rem;
+      margin: 15px 0;
+    }
+
+    #contact a { color: #fff; text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #999;
+    }
+
+    /* --------- ANIMATIONS --------- */
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-50px);} to { opacity:1; } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(50px);} to { opacity:1; } }
+    @keyframes bounce { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-8px);} }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kolanu Sneha Reddy</h1>
+  <p>Data Science & Artificial Intelligence Student</p>
+  <a href="sneha_resume.pdf" download class="btn">Download Resume</a>
+  <div class="scroll-down">Scroll ↓</div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>ABOUT</h2>
+  <div class="card">
+    Passionate Data Science & AI student with hands-on experience in machine learning, data analysis, and web-based applications. Strong interest in solving real-world problems using data-driven solutions.
+  </div>
+</section>
+
+<section id="education">
+  <h2>EDUCATION</h2>
+  <div class="card">B.Tech – Data Science & AI | ICFAI Hyderabad | CGPA: 5.36</div>
+  <div class="card">Intermediate (MPC) | Sri Chaitanya | 88.5%</div>
+  <div class="card">10th Grade | Gowtham Model School | CGPA: 9.8</div>
+</section>
+
+<section id="experience">
+  <h2>EXPERIENCE</h2>
+  <div class="card">
+    <strong>Procurement Intern – 3T Worldwide</strong><br><br>
+    • Salesforce-based procurement support<br>
+    • US team coordination<br>
+    • Documentation & process efficiency
+  </div>
+</section>
+
+<section id="projects">
+  <h2>PROJECTS</h2>
+  <div class="card">Customer Segmentation using K-Means</div>
+  <div class="card">Smart Alarm Application</div>
+  <div class="card">Bug Tracking System (Flask)</div>
+</section>
+
+<section id="skills">
+  <h2>SKILLS</h2>
+  <div class="card skills">
+    <span>Python</span><span>Machine Learning</span><span>HTML</span><span>CSS</span><span>Flask</span>
+    <span>Data Analysis</span><span>K-Means</span><span>Git</span><span>GitHub</span><span>Salesforce</span>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>CONTACT</h2>
+  <div class="card">
+    <p>📞 <a href="tel:6304757347">6304757347</a></p>
+    <p>📧 <a href="mailto:105snehareddy@gmail.com">105snehareddy@gmail.com</a></p>
+    <p>💻 <a href="https://github.com/snehareddie5" target="_blank">github.com/snehareddie5</a></p>
+  </div>
+</section>
+
+<footer>© 2026 Sneha Reddy | Portfolio</footer>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) sec.classList.add('show');
+    });
+  });
+</script>
+
+</body>
+</html>
